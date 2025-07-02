@@ -8,11 +8,11 @@
       "COLUMN_COMMENT": "",
       "COLUMN_DEFAULT": null,
       "COLUMN_KEY": "PRI",
-      "COLUMN_NAME": "id",
+      "COLUMN_NAME": "employee_id",
       "COLUMN_TYPE": "int",
       "DATA_TYPE": "int",
       "DATETIME_PRECISION": null,
-      "EXTRA": "auto_increment",
+      "EXTRA": "",
       "GENERATION_EXPRESSION": "",
       "IS_NULLABLE": "NO",
       "NUMERIC_PRECISION": 10,
@@ -28,7 +28,7 @@
       "CHARACTER_MAXIMUM_LENGTH": 100,
       "CHARACTER_OCTET_LENGTH": 400,
       "CHARACTER_SET_NAME": "utf8mb4",
-      "COLLATION_NAME": "utf8mb4_unicode_ci",
+      "COLLATION_NAME": "utf8mb4_0900_ai_ci",
       "COLUMN_COMMENT": "",
       "COLUMN_DEFAULT": null,
       "COLUMN_KEY": "",
@@ -38,7 +38,7 @@
       "DATETIME_PRECISION": null,
       "EXTRA": "",
       "GENERATION_EXPRESSION": "",
-      "IS_NULLABLE": "YES",
+      "IS_NULLABLE": "NO",
       "NUMERIC_PRECISION": null,
       "NUMERIC_SCALE": null,
       "obj": "employees",
@@ -55,16 +55,16 @@
       "COLLATION_NAME": null,
       "COLUMN_COMMENT": "",
       "COLUMN_DEFAULT": null,
-      "COLUMN_KEY": "",
-      "COLUMN_NAME": "created_at",
-      "COLUMN_TYPE": "datetime",
-      "DATA_TYPE": "datetime",
-      "DATETIME_PRECISION": 0,
+      "COLUMN_KEY": "MUL",
+      "COLUMN_NAME": "department_id",
+      "COLUMN_TYPE": "int",
+      "DATA_TYPE": "int",
+      "DATETIME_PRECISION": null,
       "EXTRA": "",
       "GENERATION_EXPRESSION": "",
       "IS_NULLABLE": "YES",
-      "NUMERIC_PRECISION": null,
-      "NUMERIC_SCALE": null,
+      "NUMERIC_PRECISION": 10,
+      "NUMERIC_SCALE": 0,
       "obj": "employees",
       "ORDINAL_POSITION": 3,
       "PRIVILEGES": "select,insert,update,references",
@@ -78,7 +78,31 @@
       "CHECK_CLAUSE": null,
       "Columns": [
         {
-          "COLUMN_NAME": "id",
+          "COLUMN_NAME": "department_id",
+          "CONSTRAINT_CATALOG": "def",
+          "CONSTRAINT_NAME": "fk_department",
+          "ORDINAL_POSITION": 1,
+          "POSITION_IN_UNIQUE_CONSTRAINT": 1,
+          "REFERENCED_COLUMN_NAME": "department_id",
+          "REFERENCED_TABLE_NAME": "departments",
+          "REFERENCED_TABLE_SCHEMA": "mytest2_dev",
+          "TABLE_NAME": "employees"
+        }
+      ],
+      "CONSTRAINT_CATALOG": "def",
+      "CONSTRAINT_NAME": "fk_department",
+      "CONSTRAINT_TYPE": "FOREIGN KEY",
+      "DELETE_RULE": "NO ACTION",
+      "ENFORCED": "YES",
+      "obj": "employees",
+      "type": "TABLE",
+      "UPDATE_RULE": "NO ACTION"
+    },
+    {
+      "CHECK_CLAUSE": null,
+      "Columns": [
+        {
+          "COLUMN_NAME": "employee_id",
           "CONSTRAINT_CATALOG": "def",
           "CONSTRAINT_NAME": "PRIMARY",
           "ORDINAL_POSITION": 1,
@@ -101,15 +125,34 @@
   ],
   "General": [
     {
-      "AUTO_INCREMENT": 1,
+      "AUTO_INCREMENT": null,
       "AVG_ROW_LENGTH": 0,
       "CREATE_OPTIONS": "",
       "MAX_DATA_LENGTH": 0,
       "obj": "employees",
-      "TABLE_COLLATION": "utf8mb4_unicode_ci",
+      "TABLE_COLLATION": "utf8mb4_0900_ai_ci",
       "TABLE_COMMENT": "",
       "type": "TABLE"
     }
   ],
-  "Indexes": []
+  "Indexes": [
+    {
+      "Columns": [
+        {
+          "COLLATION": "A",
+          "COLUMN_NAME": "department_id",
+          "INDEX_NAME": "fk_department",
+          "obj": "employees",
+          "SEQ_IN_INDEX": 1
+        }
+      ],
+      "INDEX_NAME": "fk_department",
+      "INDEX_TYPE": "BTREE",
+      "IS_VISIBLE": "YES",
+      "NON_UNIQUE": 1,
+      "obj": "employees",
+      "TABLE_CATALOG": "def",
+      "type": "TABLE"
+    }
+  ]
 }
