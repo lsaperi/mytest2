@@ -28,7 +28,7 @@
       "CHARACTER_MAXIMUM_LENGTH": 100,
       "CHARACTER_OCTET_LENGTH": 400,
       "CHARACTER_SET_NAME": "utf8mb4",
-      "COLLATION_NAME": "utf8mb4_0900_ai_ci",
+      "COLLATION_NAME": "utf8mb4_unicode_ci",
       "COLUMN_COMMENT": "",
       "COLUMN_DEFAULT": null,
       "COLUMN_KEY": "",
@@ -106,7 +106,7 @@
       "CREATE_OPTIONS": "",
       "MAX_DATA_LENGTH": 0,
       "obj": "employees",
-      "TABLE_COLLATION": "utf8mb4_0900_ai_ci",
+      "TABLE_COLLATION": "utf8mb4_unicode_ci",
       "TABLE_COMMENT": "",
       "type": "TABLE"
     }
